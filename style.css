@@ -853,6 +853,115 @@ footer .logo img.footer-logo {
     height: 35px;
 }
 
+/* --- Promo Popup --- */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: none; /* Inicia oculto, JS mostrará */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.popup-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.popup-content {
+    background: #FFFFFF;
+    max-width: 450px;
+    width: 100%;
+    padding: 50px 40px;
+    border-radius: 30px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 30px 100px rgba(0, 0, 0, 0.3);
+    transform: scale(0.8);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.popup-overlay.active .popup-content {
+    transform: scale(1);
+}
+
+.close-popup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #f0f2f5;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: var(--transition);
+}
+
+.close-popup:hover {
+    background: var(--primary-blue);
+    color: #FFFFFF;
+}
+
+.popup-badge {
+    background: rgba(0, 45, 98, 0.1);
+    color: var(--primary-blue);
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.popup-content h2 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.promo-value {
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--primary-blue);
+    line-height: 1;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promo-value span {
+    font-size: 1.5rem;
+    background: var(--gold-accent);
+    color: var(--bg-deep);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.popup-content p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.popup-content .btn-premium {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
 /* --- Mobile Responsiveness --- */
 @media (max-width: 1440px) {
     .container {
