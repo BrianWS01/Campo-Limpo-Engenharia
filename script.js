@@ -97,4 +97,32 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1000);
         });
     }
+    // Swiper Initialization - Coverflow Effect
+    const servicesSwiper = new Swiper('.services-carousel', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        loop: true,
+        coverflowEffect: {
+            rotate: 20,
+            stretch: -20,
+            depth: 200,
+            modifier: 1,
+            slideShadows: true,
+        },
+        loopedSlides: 4,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 });
