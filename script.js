@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Criar mensagem para o WhatsApp
             const message = `Olá, meu nome é ${name}.%0A%0A*E-mail:* ${email}%0A*Assunto:* ${subject}`;
-            const whatsappUrl = `https://wa.me/5511982501225?text=${message}`;
+            const whatsappUrl = `https://wa.me/5511945547801?text=${message}`;
 
             setTimeout(() => {
                 window.open(whatsappUrl, '_blank');
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modifier: 1,
             slideShadows: true,
         },
-        loopedSlides: 4,
+        loopedSlides: 8,
         autoplay: {
             delay: 4000,
             disableOnInteraction: false,
@@ -127,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Promo Popup Logic
+    /*
     const promoPopup = document.getElementById('promo-popup');
     const closePopup = document.querySelector('.close-popup');
 
@@ -148,4 +149,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    */
 });
