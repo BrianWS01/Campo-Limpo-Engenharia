@@ -1147,6 +1147,33 @@ footer .logo img.footer-logo {
         max-width: 100%;
         overflow: hidden;
     }
+
+    /* Popup Responsivo */
+    .popup-content h2 {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    .popup-content {
+        padding: 40px 25px;
+    }
+
+    /* Swiper Arrows no bottom */
+    .services-carousel .swiper-button-next,
+    .services-carousel .swiper-button-prev {
+        top: auto;
+        bottom: 10px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .services-carousel .swiper-button-prev {
+        left: 30%;
+    }
+
+    .services-carousel .swiper-button-next {
+        right: 30%;
+    }
 }
 
 @media (max-width: 480px) {
