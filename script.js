@@ -127,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Promo Popup Logic
-    /*
     const promoPopup = document.getElementById('promo-popup');
     const closePopup = document.querySelector('.close-popup');
 
@@ -149,5 +148,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    */
 });
