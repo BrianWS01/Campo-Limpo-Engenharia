@@ -148,4 +148,60 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --- Service Modal Logic ---
+    const serviceModal = document.getElementById('service-modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalDescription = document.getElementById('modal-description');
+    const closeModal = document.querySelector('.close-modal');
+    const clickableSlides = document.querySelectorAll('.clickable-slide');
+    const modalCta = serviceModal.querySelector('.modal-cta');
+
+    if (serviceModal && clickableSlides.length > 0) {
+        clickableSlides.forEach(slide => {
+            slide.addEventListener('click', () => {
+                const title = slide.getAttribute('data-title');
+                const description = slide.getAttribute('data-description');
+                const imgDiv = slide.querySelector('.service-slide-image');
+                
+                // Get image URL from background-image style
+                let bgImg = imgDiv.style.backgroundImage;
+                bgImg = bgImg.replace('url("', '').replace('")', '').replace("url('", "").replace("')", "");
+
+                // Populate modal
+                modalImg.src = bgImg;
+                modalDescription.innerHTML = `<strong>${title}</strong><br><br>${description}`;
+                
+                // Update WhatsApp Link
+                const message = `Olá, vim do site e quero saber mais sobre: ${title}`;
+                const whatsappUrl = `https://wa.me/5511945547801?text=${encodeURIComponent(message)}`;
+                if (modalCta) modalCta.setAttribute('href', whatsappUrl);
+
+                // Show modal
+                serviceModal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            });
+        });
+
+        const handleCloseModal = () => {
+            serviceModal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        };
+
+        closeModal.addEventListener('click', handleCloseModal);
+
+        // Close on overlay click
+        serviceModal.addEventListener('click', (e) => {
+            if (e.target === serviceModal) {
+                handleCloseModal();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && serviceModal.classList.contains('active')) {
+                handleCloseModal();
+            }
+        });
+    }
 });
