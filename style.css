@@ -1267,8 +1267,7 @@ footer .logo img.footer-logo {
         word-break: break-all;
         font-size: 0.9rem;
     }
-
-    .contact-card {
+    .contact-card {
         max-width: 100%;
         overflow: hidden;
     }
@@ -1309,6 +1308,11 @@ footer .logo img.footer-logo {
     .contact-info-panel,
     .contact-form-panel {
         padding: 35px 15px;
+    }
+
+    .services-carousel .swiper-slide {
+        width: 280px;
+        height: 280px;
     }
 }
 
@@ -1405,6 +1409,7 @@ footer .logo img.footer-logo {
     background: #fff;
     border-left: 1px solid #efefef;
     min-width: 350px;
+    min-height: 0;
 }
 
 .modal-header {
@@ -1512,19 +1517,21 @@ footer .logo img.footer-logo {
     
     .modal-image-side {
         flex: none;
-        height: 50%;
+        height: 40%;
     }
     
     .modal-info-side {
         flex: 1;
         min-width: 0;
+        min-height: 0;
     }
 
     .close-modal {
         top: 10px;
         right: 15px;
-        color: #000;
-        text-shadow: 0 0 10px rgba(255,255,255,0.5);
+        color: #fff;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+        z-index: 2005;
     }
 }
 
