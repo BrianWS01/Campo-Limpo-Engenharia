@@ -1267,7 +1267,8 @@ footer .logo img.footer-logo {
         word-break: break-all;
         font-size: 0.9rem;
     }
-    .contact-card {
+
+    .contact-card {
         max-width: 100%;
         overflow: hidden;
     }
@@ -1343,6 +1344,23 @@ footer .logo img.footer-logo {
 
     .section-header h2 {
         font-size: 2.2rem;
+    }
+
+    .about-stats-grid {
+        gap: 15px;
+    }
+
+    .stat-card {
+        padding: 25px 15px;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
     }
 }
 /* --- Service Modal (Instagram Style) --- */
@@ -1535,3 +1553,27 @@ footer .logo img.footer-logo {
     }
 }
 
+
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+}
+
+@media (max-width: 768px) {
+    .about-stats-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    .stat-card {
+        padding: 25px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-number {
+        font-size: 2rem !important;
+    }
+    .stat-label {
+        font-size: 0.8rem !important;
+    }
+}
