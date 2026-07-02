@@ -126,29 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-    // Promo Popup Logic
-    const promoPopup = document.getElementById('promo-popup');
-    const closePopup = document.querySelector('.close-popup');
-
-    if (promoPopup) {
-        // Mostrar o popup após 1.5 segundos
-        setTimeout(() => {
-            promoPopup.classList.add('active');
-        }, 1500);
-
-        // Fechar no botão X
-        closePopup.addEventListener('click', () => {
-            promoPopup.classList.remove('active');
-        });
-
-        // Fechar ao clicar fora do conteúdo
-        promoPopup.addEventListener('click', (e) => {
-            if (e.target === promoPopup) {
-                promoPopup.classList.remove('active');
-            }
-        });
-    }
-
     // --- Service Modal Logic ---
     const serviceModal = document.getElementById('service-modal');
     const modalImg = document.getElementById('modal-img');
